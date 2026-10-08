@@ -1,5 +1,5 @@
 {% set name = "cpp-tabulate" %}
-{% set version = "1.5" %}
+{% set version = "2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,15 @@ package:
 
 source:
   url: https://github.com/p-ranav/tabulate/archive/v{{ version }}.tar.gz
-  sha256: 16b289f46306283544bb593f4601e80d6ea51248fde52e910cc569ef08eba3fb
+  sha256: 3c12853cbf103adf659c4821351a302351d139513f1c43528095da41e8a37044
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - make  # [unix]
 
